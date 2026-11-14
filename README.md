@@ -1,5 +1,8 @@
 # ALSA: architecture showcase
 
+[![Watch the demo](docs/project-view.png)](docs/alsa-demo.mp4)
+*Click to play. Animated walkthrough built from screenshots of the running app; the AI chat answer at the end is an illustrative sample.*
+
 ALSA is an AI-native project management web application, built solo by a student developer using AI-assisted development over roughly five to six months.
 
 This repository is a **curated excerpt** of the backend: the parts that show how the system handles access control, data safety and AI privacy. The full application is private.
