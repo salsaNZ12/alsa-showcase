@@ -35,15 +35,15 @@ tests/
 
 ```mermaid
 flowchart LR
-    Client["Browser client"] --> API["FastAPI routes (main.py, not included)"]
-    API --> Perm["permissions.py: can this user do this action?"]
-    API --> Gate["ai_gate.py: is AI switched on?"]
-    API --> Guard["state_guard.py: filter and merge state"]
-    Gate -->|"only if enabled"| LLM["LLM provider (Groq)"]
-    Perm --> DB[("SQLite / PostgreSQL")]
+    Client["Browser"] --> API["FastAPI routes"]
+    API --> Perm["permissions.py"]
+    API --> Gate["ai_gate.py"]
+    API --> Guard["state_guard.py"]
+    Gate -->|"only if enabled"| LLM["LLM provider"]
+    Perm --> DB[("Database")]
     Guard --> DB
     Gate --> DB
-    Crypto["secret_crypto.py: encrypted columns"] --> DB
+    Crypto["secret_crypto.py"] --> DB
 ```
 
 ## Screenshots
