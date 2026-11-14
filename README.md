@@ -8,8 +8,8 @@ This repository is a **curated excerpt** of the backend: the parts that show how
 |---|---|
 | Backend | FastAPI, 111 routes, 31 database tables |
 | Database | SQLite for local development, PostgreSQL (Supabase) in production |
-| AI | LLM calls through Groq, always behind an opt-in gate |
-| Frontend | Vanilla JavaScript, single file, interface in 8 languages |
+| AI | LLM calls through Groq; features that read project data sit behind an opt-in gate |
+| Frontend | Vanilla JavaScript, single file, interface in Indonesian and English (six more languages are built in but currently hidden) |
 | Deployment | Render, via the dashboard (no CI/CD pipeline) |
 
 ## What is in this repository
@@ -21,7 +21,7 @@ src/
   permissions.py     Two-layer role-based access control
   project_access.py  Endpoints that grant, change and revoke project access
   state_guard.py     Per-project filtering and merging of the shared state blob, plus safety snapshots
-  ai_gate.py         Server-side opt-in gate for every AI feature
+  ai_gate.py         Server-side opt-in gate for AI features that read project data
   secret_crypto.py   Transparent encryption for integration tokens and chat history
   html_sanitizer.py  Allow-list HTML sanitizer for rich text
 tests/
