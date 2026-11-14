@@ -119,4 +119,6 @@ Each prints `ALL TESTS PASSED` on success and exits with a non-zero status if an
 
 ## About the development process
 
-ALSA was built by one person with AI assistance. The architecture decisions above, such as why the AI gate fails closed and why the state guard restores missing projects, are the part I can explain and defend in detail.
+ALSA was designed and built solo, using AI to speed up implementation. The decisions documented above are mine: where the trust boundaries sit, why AI access fails closed, and why a stale browser tab should never be able to delete a project. I can walk through the reasoning, trade-offs and failure modes behind each of them.
+
+Open to freelance full-stack work.
