@@ -102,7 +102,7 @@ PYTHONPATH=src python tests/test_permissions.py
 PYTHONPATH=src python tests/test_state_guard.py
 ```
 
-Each prints `SEMUA TES LULUS` ("all tests passed") on success. Test names and output are still in Indonesian.
+Each prints `ALL TESTS PASSED` on success and exits with a non-zero status if any check fails.
 
 **What is not here:** the tests for the project-access endpoints exercise the full application, including `main.py`, so they live in the private repository and are not part of this excerpt.
 
