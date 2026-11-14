@@ -1,0 +1,9 @@
+.env
+.env.*
+*.db
+*.json.gz
+backup/
+ngrok.yml
+__pycache__/
+.venv/
+.pytest_cache/
