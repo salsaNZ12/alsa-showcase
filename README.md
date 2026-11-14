@@ -46,6 +46,17 @@ flowchart LR
     Crypto["secret_crypto.py: encrypted columns"] --> DB
 ```
 
+## Screenshots
+
+![Project view with dependency map](docs/project-view.png)
+*Project view: task status, deadline health, bottleneck detection and dependency map.*
+
+![AI Analyzer opt-in dialog](docs/ai-analyzer-opt-in.png)
+*AI is off by default. Turning it on requires explicit consent, and the server checks the switch before any data is sent.*
+
+![AI Dashboard switched off](docs/ai-dashboard-off.png)
+*The dashboard AI chat has its own per-user switch, independent from the per-project Analyzer.*
+
 ## Design decisions
 
 ### 1. Two-layer access control (`permissions.py`, `project_access.py`)
