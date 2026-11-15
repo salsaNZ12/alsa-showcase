@@ -102,7 +102,7 @@ The dashboard state is one JSON blob per workspace that holds every project. Rat
 - **Production guard (`database.py`):** on the hosting platform, a missing `DATABASE_URL` stops the server from starting instead of silently creating an empty SQLite file that would be wiped on every deploy.
 - **Connection timeouts and pool settings** so a paused or slow database produces a fast error rather than a frozen dashboard.
 - **SQLite in WAL mode** so a long read does not block writers during local development.
-- **Optimistic locking** on shared notes: a version number must match on save, otherwise the server answers 409.
+- **Optimistic locking** on shared notes: a version number must match on save, otherwise the server answers 409. A small reference demo of this pattern on the client side (409 conflict dialog, single-flight 401 recovery, safe retries) is in [conflict-safe-notes](https://github.com/salsaNZ12/conflict-safe-notes). It was written separately and is not extracted from this codebase.
 - **HTML sanitizer (`html_sanitizer.py`)** uses an allow-list for tags, attributes and CSS, and only the Python standard library, to prevent stored XSS in rich-text content.
 
 ## Running the tests
